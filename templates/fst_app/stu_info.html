@@ -1,0 +1,18 @@
+{% extends 'fst_app/base.html' %}
+
+{% block body %}
+
+<h1> STUDENT INFORMATION</h1>
+
+<h2> Student Id: {{start.id}}</h2>
+
+<h4>Student Name: {{start.fname}} {{start.lname}} </h4>
+<h4>Email: {{start.email}}</h4>
+<h4>Phone No: {{start.phnne}}</h4>
+
+<a href=" {% url 'fst_app:stuup' student_id=start.id %}" class="btn btn-primary">update</a>
+<a href=" {% url 'fst_app:studlt' student_id=start.id %}" class="btn btn-primary">delete</a>
+
+
+
+{% endblock %}

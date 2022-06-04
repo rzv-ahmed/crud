@@ -1,0 +1,15 @@
+{% extends 'fst_app/base.html' %}
+
+{% block body %}
+
+<h1> student update</h1>
+
+<form action="" method="POST">
+    {{start.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="update">
+
+{% endblock body %}
+
+
+

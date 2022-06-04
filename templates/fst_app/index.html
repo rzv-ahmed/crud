@@ -1,0 +1,18 @@
+{% extends 'fst_app/base.html' %}
+
+{% block body %}
+<ul>
+
+<h1> student list </h1>
+{% if start %}
+{% for student in start %}
+<li><a href=" {% url 'fst_app:stuinfo' student_id=student.id %}"> {{student.fname}} {{student.lname}}</li></a>
+{% endfor %}
+
+{% else %}
+<h3>no student</h3>
+
+{% endif %}
+</ul>
+
+{% endblock %}
